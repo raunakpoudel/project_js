@@ -1,0 +1,17 @@
+Callback hell
+ Importance of callback
+
+------------------------------------------------------------------------------------------------------------------------------
+ Callback functions are important in JavaScript because they let you create asynchronous code that doesn't block the main thread
+of execution. This enables you to perform other tasks, such as user interface (UI) updates or other API calls, while an
+ asynchronous action is executing.
+ ------------------------------------------------------------------------------------------------------------------------------
+Issues with callback
+   a) Callack hell:
+   When a function is passed as an argument to another function ,it becomes an callback function .This process continue and there 
+   manu callbacks inside another callback function .This grows the code horizontally instead of vertically .This mechanizm is known as 
+   callback hell.
+
+   b) Inversion of controll:
+   The callback function is passed to another callback ,this way we loose the controll of our code . We don't know behind the seen what
+   is happening and program become diffucult to mantain .That process is known as Invision of controll. 
