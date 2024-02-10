@@ -1,3 +1,7 @@
+
+
+// PROMISE //
+
 // A Promise is a proxy for a value not necessarily known when the promise is created. 
 // It allows you to associate handlers with an asynchronous action's eventual success value or
 //  failure reason. This lets asynchronous methods return values like synchronous methods: instead 
@@ -62,4 +66,59 @@
 
 // ---------------------------------------------------------------------------------------------------------
 // now let's try rejection too
+// const promisefive =new Promise((resolve,reject)=>{
+//     setTimeout( ()=>{
+//             error =true
+//             if(!error){
+//                 resolve();
+//             }
+//             else{
+//                 reject();
+//             }
+//         },1000)
+//     }
+// );
+
+// promisefive.then(
+// ()=>{
+//     console.log("True");
+
+// })
+// promisefive.catch(
+// ()=>{
+//     console.log("False");
+
+// })
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+// async and await in promises
+
+
+const promisesix =  new promise((resolve,reject)=>{
+    setTimeout(()=>{
+        const error = true;
+        if(!error){
+            resolve(
+                ()=>{
+                    console.log("No error")
+                }
+            )
+        }
+        else{
+            reject(()=>{
+                console.log("Error present")
+            })
+        }
+    },2000)
+})
+
+async function compromise(){
+    try {
+        const a =await promisesix(
+            console.log(a);
+        )
+    } catch (error) {
+        console.log(error)
+    }
+}
 
