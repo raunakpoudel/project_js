@@ -94,31 +94,48 @@
 // async and await in promises
 
 
-const promisesix =  new promise((resolve,reject)=>{
-    setTimeout(()=>{
-        const error = true;
-        if(!error){
-            resolve(
-                ()=>{
-                    console.log("No error")
-                }
-            )
-        }
-        else{
-            reject(()=>{
-                console.log("Error present")
-            })
-        }
-    },2000)
-})
+// const promisesix =  new promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         const error = true;
+//         if(!error){
+//             resolve(
+//                 ()=>{
+//                     console.log("No error")
+//                 }
+//             )
+//         }
+//         else{
+//             reject(()=>{
+//                 console.log("Error present")
+//             })
+//         }
+//     },2000)
+// })
 
-async function compromise(){
-    try {
-        const a =await promisesix(
-            console.log(a);
-        )
-    } catch (error) {
-        console.log(error)
+// async function compromise(){
+//     try {
+//         const a =await promisesix(
+//             console.log(a)
+
+//         )
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+// fatching data using json 
+
+
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then(
+    (response)=>{
+   return response.json()
     }
-}
-
+).then((data)=>{
+    console.log(data)
+})
+.catch((error)=>{
+    console.log(error)
+})
